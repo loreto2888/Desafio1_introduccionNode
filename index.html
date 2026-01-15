@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desafío 1 - Introducción a Node</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --accent: #22d3ee;
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(circle at 20% 20%, rgba(34,211,238,0.12), transparent 25%),
+                  radial-gradient(circle at 80% 0%, rgba(34,211,238,0.16), transparent 30%),
+                  var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 16px;
+    }
+    .card {
+      width: min(960px, 100%);
+      background: var(--panel);
+      border: 1px solid rgba(255,255,255,0.05);
+      border-radius: 16px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.45);
+      padding: 28px 28px 32px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 28px;
+      letter-spacing: 0.5px;
+    }
+    p.lead {
+      margin: 0 0 18px;
+      color: var(--muted);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .tile {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 12px;
+      padding: 14px 16px;
+    }
+    .tile h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      color: var(--accent);
+      letter-spacing: 0.3px;
+    }
+    code, pre {
+      font-family: "Cascadia Code", "Fira Code", "Consolas", monospace;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: block;
+      margin: 0;
+      color: #c7e5ff;
+      overflow-x: auto;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 10px;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: right;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(34,211,238,0.16);
+      color: var(--accent);
+      font-size: 12px;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>Desafío 1 · Veterinaria JS <span class="badge">CLI</span></h1>
+    <p class="lead">Gestor de citas en Node.js que usa File System para registrar, listar y consultar detalles desde la línea de comandos.</p>
+
+    <div class="grid">
+      <section class="tile">
+        <h3>Prerrequisitos</h3>
+        <ul>
+          <li>Node.js 18+</li>
+          <li>Consola con acceso al proyecto</li>
+          <li>JSON `citas.json` en la raíz (se crea si no existe)</li>
+        </ul>
+      </section>
+
+      <section class="tile">
+        <h3>Registrar cita</h3>
+        <pre>node index.js registrar &lt;nombre&gt; &lt;edad&gt; &lt;animal&gt; &lt;color&gt; &lt;enfermedad&gt;</pre>
+        <ul>
+          <li>Genera un id corto y fecha ISO.</li>
+          <li>Edad se normaliza a número si es posible.</li>
+        </ul>
+      </section>
+
+      <section class="tile">
+        <h3>Listar citas</h3>
+        <pre>node index.js listar</pre>
+        <ul>
+          <li>Muestra todas las citas almacenadas.</li>
+          <li>Si alguna cita antigua no tiene id, se etiqueta como "sin-id".</li>
+        </ul>
+      </section>
+
+      <section class="tile">
+        <h3>Detalle por id</h3>
+        <pre>node index.js detalle &lt;id&gt;</pre>
+        <ul>
+          <li>Imprime el objeto completo en JSON.</li>
+          <li>Útil para revisar campos guardados.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>&copy; 2026 Johanna Barrientos. Todos los derechos reservados.</footer>
+  </main>
+</body>
+</html>
