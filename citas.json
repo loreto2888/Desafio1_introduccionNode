@@ -1,29 +1,16 @@
 [
-  {
-    "nombre": "Benito",
-    "edad": "1 año",
-    "animal": "perro",
-    "color": "blanco",
-    "enfermedad": "otitis",
-    "licencia": "(c) 2026 Johanna Barrientos",
-    "fecha": "2026-01-14T23:51:35.086Z"
-  },
-  {
-    "nombre": "Julieta",
-    "edad": "6 años",
-    "animal": "perro",
-    "color": "amarillo",
-    "enfermedad": "Moquillo",
-    "licencia": "(c) 2026 Johanna Barrientos",
-    "fecha": "2026-01-14T23:51:35.086Z"
-  },
-  {
-    "id": "cdbc63ea",
-    "nombre": "Luna",
-    "edad": 3,
-    "animal": "perro",
-    "color": "negro",
-    "enfermedad": "alergia",
-    "fecha": "2026-01-15T00:01:54.296Z"
-  }
+	{
+		"nombre": "Benito",
+		"edad": "2 años",
+		"animal": "perro",
+		"color": "blanco",
+		"enfermedad": "vomitos"
+	},
+	{
+		"nombre": "Julieta",
+		"edad": "6 años",
+		"animal": "perro",
+		"color": "amarillo",
+		"enfermedad": "Moquillo"
+	}
 ]
